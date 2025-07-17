@@ -8,7 +8,7 @@
 因为求稳定所以我更新会比较慢，已进行测试并解决相关bug，稳定使用，到手即用。<br>
 默认屏蔽虚拟和真实系统序列号和DNS<br>
 自带HB APPSTORE/常规超频等很多插件，够大部分人用了<br>
-Switch Firmware固件: https://github.com/THZoria/NX_Firmware/releases <br>
+[Switch HorizonOS Firmware 点击这里下载](https://github.com/THZoria/NX_Firmware/releases)<br>
 > [!NOTE]  
 > 本整合作者从未进行任何收费盈利行为！
 > 本项目仅作个人交流学习、研究硬件、备份数据使用，禁止使用该项目进行任何形式商业化、贩卖等使用。不支持也不提供任何违规非法用途支持和使用，请勿用于任何非法用途，请在下载24小时之内删除。
