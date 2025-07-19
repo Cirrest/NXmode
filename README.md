@@ -85,6 +85,7 @@ usb30_force_enabled = u8!0x0
 ```
 usb3force=0
 ```
+<br>
 
 ♿♿♿如果你的NX无法稳定运行或经常出现安装使用Ubuntu和Android有玄学问题，请考虑你的芯片是否需要更新固件
 ----
