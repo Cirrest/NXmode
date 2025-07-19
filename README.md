@@ -13,7 +13,7 @@
 > 本整合作者从未进行任何收费盈利行为！
 > 本项目仅作个人交流学习、研究硬件、备份数据使用，禁止使用该项目进行任何形式商业化、贩卖等使用。不支持也不提供任何违规非法用途支持和使用，请勿用于任何非法用途，请在下载24小时之内删除。
 
-####  *使用* 
+###  *使用* 
 ***
 
 * Telsa是Ultrahand，减少卡屏等键位冲突
@@ -38,7 +38,7 @@
 > 进去1是关闭插件自启动，2是删除安装的主题，有效解决进不去HOS系统的故障<br>
 > 更详细说明请见[官方说明](https://github.com/zdm65477730/CommonProblemResolver/)
 
-####  *进阶*
+###  *进阶*
 ***
 * 应大部分用户反馈，20241027版本后默认开启USB3.0，在支持该协议的端口和线缆上使用能有效提高有线传输速度，但会较严重干扰2.4GHz WIFI和蓝牙信号质量和信噪比，并且可能在部分电脑和线材在MTP模式下无法识别设备。如果你遇到上述问题，则需手动编辑 Atmosphere 系统配置文件来禁用此功能，如下所示：<br><br>
 目录/atmosphere/config/system_settings.ini<br>
@@ -53,7 +53,7 @@ usb3force=0
 <br>
 <br>
 
-####  **超频** 
+###  *超频* 
 
 ----
 应诸多用户要求，并制作KIP补丁并添加超级OC功能<br>
@@ -80,6 +80,7 @@ usb3force=0
   * 打开UltraHnand<br>
   * 按→键选择 OC Switchcraft EOS 进行进阶操作<br><br><br>
 
+***
 
 ♿♿♿如果你的NX无法稳定运行或经常出现安装使用Ubuntu和Android有玄学问题，请考虑你的芯片是否需要更新固件
 ----
@@ -97,6 +98,7 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 [Picofly toolbox](https://github.com/Ansem-SoD/Picofly/blob/main/Firmwares/picofly_toolbox_0.2.bin)<br>
 [Picofly Firmwares](https://github.com/rehius/usk/releases)<br><br>
 
+***
 
 🎉鸣谢(排名不分前后):
 ----
