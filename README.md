@@ -38,18 +38,7 @@
 > 进去1是关闭插件自启动，2是删除安装的主题，有效解决进不去HOS系统的故障<br>
 > 更详细说明请见[官方说明](https://github.com/zdm65477730/CommonProblemResolver/)
 
-###  *进阶*
-***
-* 应大部分用户反馈，20241027版本后默认开启USB3.0，在支持该协议的端口和线缆上使用能有效提高有线传输速度，但会较严重干扰2.4GHz WIFI和蓝牙信号质量和信噪比，并且可能在部分电脑和线材在MTP模式下无法识别设备。如果你遇到上述问题，则需手动编辑 Atmosphere 系统配置文件来禁用此功能，如下所示：<br><br>
-目录/atmosphere/config/system_settings.ini<br>
-```
-[usb]
-usb30_force_enabled = u8!0x0
-```
-目录/bootloader/hekate_ipl.ini<br>
-```
-usb3force=0
-```
+
 <br>
 <br>
 
@@ -81,6 +70,18 @@ usb3force=0
   * 按→键选择 OC Switchcraft EOS 进行进阶操作<br><br><br>
 
 ***
+###  *进阶*
+***
+* 应大部分用户反馈，20241027版本后默认开启USB3.0，在支持该协议的端口和线缆上使用能有效提高有线传输速度，但会较严重干扰2.4GHz WIFI和蓝牙信号质量和信噪比，并且可能在部分电脑和线材在MTP模式下无法识别设备。如果你遇到上述问题，则需手动编辑 Atmosphere 系统配置文件来禁用此功能，如下所示：<br><br>
+目录/atmosphere/config/system_settings.ini<br>
+```
+[usb]
+usb30_force_enabled = u8!0x0
+```
+目录/bootloader/hekate_ipl.ini<br>
+```
+usb3force=0
+```
 
 ♿♿♿如果你的NX无法稳定运行或经常出现安装使用Ubuntu和Android有玄学问题，请考虑你的芯片是否需要更新固件
 ----
