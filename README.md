@@ -30,6 +30,17 @@
 > 该整合包支持软破，但因软破不稳定性因素更多，可能在软破及上无法稳定正常使用<br>
 > 如果你是 腾讯-任天堂Switch 中国大陆硬件 用户，在升级19.0.1+系统前，可能需要 [切换至全球版本](https://github.com/CaiMiao/Tencent-switcher-GUI)
 
+***
+
+> [!TIP]
+> 该整合包已添加CommonProblemResolver救砖插件 <br> 可Hekate下删除主题和关闭插件自动启动<br>
+> 启动路径:hekate启动器-更多设置-CommonProblemResolver <br>
+> 进去1是关闭插件自启动，2是删除安装的主题，有效解决进不去HOS系统的故障<br>
+> 更详细说明请见[官方说明](https://github.com/zdm65477730/CommonProblemResolver/)
+
+
+####  **进阶** 
+***
 * 应大部分用户反馈，20241027版本后默认开启USB3.0，在支持该协议的端口和线缆上使用能有效提高有线传输速度，但会较严重干扰2.4GHz WIFI和蓝牙信号质量和信噪比，并且可能在部分电脑和线材在MTP模式下无法识别设备。如果你遇到上述问题，则需手动编辑 Atmosphere 系统配置文件来禁用此功能，如下所示：<br><br>
 目录/atmosphere/config/system_settings.ini<br>
 ```
@@ -43,12 +54,7 @@ usb3force=0
 <br>
 <br>
 
-> [!TIP]
-> 该整合包已添加CommonProblemResolver救砖插件 <br> 可Hekate下删除主题和关闭插件自动启动<br>
-> 启动路径:hekate启动器-更多设置-CommonProblemResolver <br>
-> 进去1是关闭插件自启动，2是删除安装的主题，有效解决进不去HOS系统的故障<br>
-> 更详细说明请见[官方说明](https://github.com/zdm65477730/CommonProblemResolver/)
-
+***
 
 ----
 应诸多用户要求，并制作KIP补丁并添加超级OC功能<br>
