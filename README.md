@@ -108,6 +108,7 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 Linkalho<br>
 [Moonligh](https://github.com/XITRIX/Moonlight-Switch)<br>
 [NXActivityLog](https://github.com/zdm65477730/NX-Activity-Log)<br>
+[NX FanControl](https://github.com/Zathawo/NX-FanControl)<br>
 [NX Shell](https://github.com/joel16/NX-Shell)<br>
 [SwitchThemeInjector](https://github.com/exelix11/SwitchThemeInjector)<br>
 [sys-clk](https://github.com/retronx-team/sys-clk)<br>
