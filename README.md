@@ -34,8 +34,6 @@
     虚拟系统 - 创建emuMMC - SD卡文件<br>
     等待跑条完毕即可进入虚拟系统<br>
 
-***
-
 > [!WARNING]
 > 该整合包支持软破，但因软破不稳定性因素更多，可能在软破及上无法稳定正常使用<br>
 > 如果你是 腾讯-任天堂Switch 中国大陆硬件 用户，在升级19.0.1+系统前，可能需要 [切换至全球版本](https://github.com/CaiMiao/Tencent-switcher-GUI)
