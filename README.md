@@ -20,6 +20,10 @@
   * Ultrahand按键：ZL+ZR+ZDDown(左下按键)
 * 内置自调风扇转速调节配置，风扇调整更细腻平衡，降低主机模式闷热问题，或延长掌机模式续航能力
   * 如果你要自定义风扇配置，请使用自带 NX Fancontrol 插件调整
+* 虚拟系统进入原相册方法:
+  * 按 R 并打开相册
+* 关闭性能监控悬浮窗方法:
+  * 
 * 新手小白向 - 安全的升级Switch大气层HOS/整合包教程：
 [酷安链接](https://www.coolapk.com/feed/57053591?shareKey=YWYyOGZjY2U0YTE5NjY3YWRmMTg~&shareUid=2679393&shareFrom=com.coolapk.market_14.0.3)<br>
   * ~~【推荐】格式化SD卡重做FAT32系统使用最稳定(如果是我上一版本的可以直接覆盖更新)~~<br>
@@ -80,7 +84,7 @@
 
 ###  *进阶*
 ***
-* 应大部分用户反馈，20241027版本后默认开启USB3.0，在支持该协议的端口和线缆上使用能有效提高有线传输速度，但会较严重干扰2.4GHz WIFI和蓝牙信号质量和信噪比，并且可能在部分电脑和线材在MTP模式下无法识别设备。如果你遇到上述问题，则需手动编辑 Atmosphere 系统配置文件来禁用此功能，如下所示：
+* 默认开启USB3.0，在支持该协议的端口和线缆上使用能有效提高有线传输速度，但会较严重干扰2.4GHz WIFI和蓝牙信号质量和信噪比，并且可能在部分电脑和线材在MTP模式下无法识别设备。如果你遇到上述问题，则需手动编辑 Atmosphere 系统配置文件来禁用此功能，如下所示：
   
 <br><br>
 目录/atmosphere/config/system_settings.ini<br>
@@ -131,7 +135,7 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 Linkalho<br>
 [Moonligh](https://github.com/XITRIX/Moonlight-Switch)<br>
 [NXActivityLog](https://github.com/zdm65477730/NX-Activity-Log)<br>
-[NX FanControl](https://github.com/Zathawo/NX-FanControl)<br>
+[NX FanControl](https://github.com/ppkantorski/NX-FanControl/)<br>
 [NX Shell](https://github.com/joel16/NX-Shell)<br>
 [SwitchThemeInjector](https://github.com/exelix11/SwitchThemeInjector)<br>
 [sys-clk](https://github.com/retronx-team/sys-clk)<br>
