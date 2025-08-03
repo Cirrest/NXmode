@@ -144,7 +144,7 @@ Linkalho<br>
 [Thmerzer](https://themezer.net/)<br>
 [tinfoil](https://tinfoil.io/)<br>
 [CommonProblemResolver](https://github.com/zdm65477730/CommonProblemResolver/?tab=readme-ov-file#commonproblemresolver-cpr)<br>
-[NX-OVLLOADER](https://github.com/zdm65477730/nx-ovlloader)<br>
+[NX-OVLLOADER](https://github.com/ppkantorski/nx-ovlloader)<br>
 [Ultrahand Overlay](https://github.com/ppkantorski/Ultrahand-Overlay)<br>
 [SaltyNX](https://github.com/masagrator/SaltyNX)<br>
 [OC-Switchcraft-EOS](https://github.com/halop/OC-Switchcraft-EOS)<br>
