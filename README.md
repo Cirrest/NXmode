@@ -5,7 +5,8 @@
 若遇到问题可以提交 [issues](https://github.com/Cirrest/NXmode_cirrest/issues) 或 酷安 Cirrest 反馈。<br>
 [酷安同步更新](http://www.coolapk.com/u/2679393)<br>
 <br>
-因为求稳定所以我更新会比较慢，已进行测试并解决相关bug，稳定使用，到手即用。<br>
+
+> 因为求稳定所以我更新会比较慢，已进行测试并解决相关bug，稳定使用，到手即用。<br>
 默认屏蔽虚拟和真实系统序列号和DNS<br>
 自带HB APPSTORE/常规超频等很多插件，够大部分人用了<br>
 
@@ -17,19 +18,19 @@
 ***
 
 * Telsa是Ultrahand，减少卡屏等键位冲突
-  * Ultrahand按键：ZL+ZR+ZDDown(左下按键)
+  * Ultrahand按键：`ZL+ZR+ZDDown(左下按键)`
 * 内置自调风扇转速调节配置，风扇调整更细腻平衡，降低主机模式闷热问题，或延长掌机模式续航能力
-  * 如果你要自定义风扇配置，请使用自带 NX Fancontrol 插件调整
+  * 如果你要自定义风扇配置，请使用自带 `NX Fancontrol` 插件调整
 * 虚拟系统进入原相册方法:
-  * 按 R 并打开相册
+  * 按 `R` 并打开相册
 * 关闭性能监控悬浮窗方法:
-  * 按下左右两个手柄的摇杆
+  * 按下`左右`两个手柄的摇杆
 * 新手小白向 - 安全的升级Switch大气层HOS/整合包教程：
 [酷安链接](https://www.coolapk.com/feed/57053591?shareKey=YWYyOGZjY2U0YTE5NjY3YWRmMTg~&shareUid=2679393&shareFrom=com.coolapk.market_14.0.3)<br>
   * ~~【推荐】格式化SD卡重做FAT32系统使用最稳定(如果是我上一版本的可以直接覆盖更新)~~<br>
   * [Switch HorizonOS Firmware 点击这里下载](https://github.com/THZoria/NX_Firmware/releases)<br>
 使用与更新整合包:<br>
-* 1.删除SD卡其它所有文件，但请保留SD卡根目录 Nintendo 、emuMMC 文件夹 以及你需要保留的文件(如金手指、Mod等）<br>
+* 1.删除SD卡其它所有文件，但请保留SD卡根目录 `Nintendo` 、`emuMMC` 文件夹 以及`你需要保留的文件(如金手指、Mod等）`<br>
 * 2.解压整合包zip压缩包，将里面全部文件夹和文件复制到SD卡根目录<br>
 * 3.使用并享受<br>
   * 如果没有emuMMC文件夹或没有制作虚拟系统，请在Hekate引导界面选择：<br>
@@ -59,7 +60,7 @@
 ----
 应诸多用户要求，并制作KIP补丁并添加超级OC功能<br>
 > [!NOTE]
-> 请注意:有用户报告默认OC不稳定，从 20250602 版本开始，整合包不再主动整合超频Kips，OC超频需要自行将 NX-UltraOC_xxx.zip 附件文件下载解压后，将里面4个文件夹复制并覆盖至Switch SD卡根目录
+> 请注意:有用户报告默认OC不稳定，从 20250602 版本开始，整合包不再主动整合超频Kips，OC超频需要自行将 NX-UltraOC_xxx.zip 附件文件下载解压后，将里面`4`个文件夹复制并覆盖至`Switch SD卡根目录`
 
 默认开放以下最高OC频率:<br>
 |  | CPU | GPU | MEM |
@@ -70,7 +71,7 @@
 
  > [!CAUTION]
  > 进阶用户可自定义调整频率/电压/时序。OC超频功能极其危险，会增大发热降低续航，并可能损害你的硬件！<br>
- > 如果想更进一步更激进超频，请自行替换更为激进的 KIP 并替换 (\atmosphere\kips\loader.kip)<br>
+ > 如果想更进一步更激进超频，请自行替换更为激进的 KIP 并替换 `\atmosphere\kips\loader.kip`<br>
  > 不建议普通用户使用或长时间使用，若使用请自负责。
 
 
@@ -81,7 +82,7 @@
 <br>
 【进阶超频操作】<br>
 * 打开UltraHnand<br>
-* 按→键选择 OC Switchcraft EOS 进行进阶操作<br><br><br>
+* 按→键选择 `OC Switchcraft EOS` 进行进阶操作<br><br><br>
 
 
 ###  *进阶*
@@ -89,12 +90,12 @@
 * 默认开启USB3.0，在支持该协议的端口和线缆上使用能有效提高有线传输速度，但会较严重干扰2.4GHz WIFI和蓝牙信号质量和信噪比，并且可能在部分电脑和线材在MTP模式下无法识别设备。如果你遇到上述问题，则需手动编辑 Atmosphere 系统配置文件来禁用此功能，如下所示：
   
 <br><br>
-目录/atmosphere/config/system_settings.ini<br>
+根目录/atmosphere/config/system_settings.ini<br>
 ```
 [usb]
 usb30_force_enabled = u8!0x0
 ```
-目录/bootloader/hekate_ipl.ini<br>
+根目录/bootloader/hekate_ipl.ini<br>
 ```
 usb3force=0
 ```
