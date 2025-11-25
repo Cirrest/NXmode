@@ -131,7 +131,7 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 [DBI](https://github.com/rashevskyv/dbi)<br>
 [DBI中文版 by:时鹏亮](https://shipengliang.com/games/%E7%AB%AF%E5%8D%88%E8%8A%82%E5%84%BF%E7%AB%A5%E8%8A%82%E7%A4%BC%E7%89%A9%EF%BC%9A%E5%85%A8%E7%90%83%E9%A6%96%E5%8F%91-dbi-%E4%B8%AD%E6%96%87%E7%89%88.html)<br>
 [aio-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater)<br>
-[EdiZon](https://github.com/zdm65477730/EdiZon-Overlay/)<br>
+[EdiZon](https://github.com/proferabg/EdiZon-Overlay)<br>
 [Fizeau](https://github.com/averne/Fizeau)<br>
 [ftpd](https://github.com/mtheall/ftpd)<br>
 [Mission Control](https://github.com/ndeadly/MissionControl)<br>
