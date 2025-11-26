@@ -34,7 +34,7 @@ ATMOSPHERE_OPTIMIZATION_FLAG := -O2
 endif
 
 DEFINES	    := $(ATMOSPHERE_DEFINES) -DATMOSPHERE_IS_STRATOSPHERE -D_GNU_SOURCE
-SETTINGS    := $(ATMOSPHERE_SETTINGS) $(ATMOSPHERE_OPTIMIZATION_FLAG) -Wextra -Werror -Wno-missing-field-initializers -flto
+SETTINGS    := $(ATMOSPHERE_SETTINGS) $(ATMOSPHERE_OPTIMIZATION_FLAG) -Wextra -Werror -Wno-missing-field-initializers -flto -Wno-error=unused-result
 CFLAGS      := $(ATMOSPHERE_CFLAGS) $(SETTINGS) $(DEFINES) $(INCLUDE)
 CXXFLAGS    := $(CFLAGS) $(ATMOSPHERE_CXXFLAGS)
 ASFLAGS     := $(ATMOSPHERE_ASFLAGS) $(SETTINGS) $(DEFINES)
@@ -118,7 +118,7 @@ clean:
 	@echo clean $(ATMOSPHERE_BUILD_NAME) ...
 	@rm -fr $(ATMOSPHERE_BUILD_DIR) $(ATMOSPHERE_OUT_DIR)
 	@rm -fr $(foreach hdr,$(GCH_DIRS),$(hdr)/$(ATMOSPHERE_GCH_IDENTIFIER))
-	@for i in $(GCH_DIRS); do [ -d $$i ] && rmdir --ignore-fail-on-non-empty $$i || true; done
+	@for i in $(GCH_DIRS); do [ -d $$i ] && rmdir $$i 2>/dev/null || true; done
 
 $(ATMOSPHERE_LIBRARY_DIR) $(ATMOSPHERE_BUILD_DIR) $(GCH_DIRS):
 	@[ -d $@ ] || mkdir -p $@
