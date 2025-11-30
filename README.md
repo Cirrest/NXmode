@@ -153,6 +153,7 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 [SaltyNX](https://github.com/masagrator/SaltyNX)<br>
 [OC-Switchcraft-EOS](https://github.com/halop/OC-Switchcraft-EOS)<br>
 [nim patch](https://github.com/fruityloops1/nim-prodinfo-blank-fix/)<br>
+[QuickNTP](https://github.com/nedex/QuickNTP/)<br>
 [sys-patch](https://github.com/impeeza/sys-patch)<br>
 [Tencent-switcher-GUI](https://github.com/CaiMiao/Tencent-switcher-GUI)<br>
 [Goldleaf](https://github.com/XorTroll/Goldleaf)<br>
