@@ -137,7 +137,7 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 [Mission Control](https://github.com/ndeadly/MissionControl)<br>
 [hb-appstore](https://github.com/fortheusers/hb-appstore)<br>
 [JKSV](https://github.com/J-D-K/JKSV)<br>
-Linkalho<br>
+[Linkalho](https://github.com/impeeza/linkalho)<br>
 [Moonligh](https://github.com/XITRIX/Moonlight-Switch)<br>
 [NXActivityLog](https://github.com/zdm65477730/NX-Activity-Log)<br>
 [NX FanControl](https://github.com/ppkantorski/NX-FanControl/)<br>
