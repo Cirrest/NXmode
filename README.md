@@ -4,7 +4,7 @@
 您若喜欢该整合包，请给我点亮⭐Star<br>
 若遇到问题可以提交 [issues](https://github.com/Cirrest/NXmode/issues) 或 酷安 Cirrest 反馈。<br>
 [酷安同步更新](http://www.coolapk.com/u/2679393)<br>
-![](https://komarev.com/ghpvc/?username=Cirrest&color=blueviolet)![](https://img.shields.io/github/downloads/Cirrest/NXmode/total?style=for-the-badge&labelColor=blue&color=ff69b4)![](https://img.shields.io/github/v/release/Cirrest/NXmode?include_prereleases&style=for-the-badge)
+![](https://img.shields.io/github/downloads/Cirrest/NXmode/total?style=for-the-badge&labelColor=blue&color=ff69b4)![](https://img.shields.io/github/v/release/Cirrest/NXmode?include_prereleases&style=for-the-badge)
 
 <br>
 
