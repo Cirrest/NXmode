@@ -1,6 +1,7 @@
 # Switch大气层整合包
 均来自官方Github源，简洁，稳定，插件齐全<br>
-![](https://komarev.com/ghpvc/?username=Cirrest&color=blueviolet)
+![](https://komarev.com/ghpvc/?username=Cirrest&color=blueviolet)![](https://img.shields.io/github/downloads/Cirrest/NXmode/total?style=for-the-badge&labelColor=blue&color=ff69b4)
+
 <br>
 您若喜欢该整合包，请给我点亮⭐Star<br>
 若遇到问题可以提交 [issues](https://github.com/Cirrest/NXmode/issues) 或 酷安 Cirrest 反馈。<br>
