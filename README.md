@@ -2,7 +2,7 @@
 均来自官方Github源，简洁，稳定，插件齐全<br>
 <br>
 您若喜欢该整合包，请给我点亮⭐Star<br>
-若遇到问题可以提交 [issues](https://github.com/Cirrest/NXmode_cirrest/issues) 或 酷安 Cirrest 反馈。<br>
+若遇到问题可以提交 [issues](https://github.com/Cirrest/NXmode/issues) 或 酷安 Cirrest 反馈。<br>
 [酷安同步更新](http://www.coolapk.com/u/2679393)<br>
 <br>
 
