@@ -27,7 +27,9 @@
   * 按 `R` 并打开相册
 * 关闭性能监控悬浮窗方法:
   * 按下`左右`两个手柄的摇杆
-* 新手小白必读 - Switch开荒、升级系统/整合包&备份恢复存档教程：
+
+
+* 新手小白必读 - Switch新卡开荒、升级系统/整合包&备份恢复存档教程：
 [酷安链接](https://www.coolapk.com/feed/57053591?shareKey=YWYyOGZjY2U0YTE5NjY3YWRmMTg~&shareUid=2679393&shareFrom=com.coolapk.market_14.0.3)<br>
   * ~~【推荐】格式化SD卡重做FAT32系统使用最稳定(如果是我上一版本的可以直接覆盖更新)~~<br>
   * [Switch HorizonOS Firmware 点击这里下载](https://github.com/THZoria/NX_Firmware/releases)<br><br>
