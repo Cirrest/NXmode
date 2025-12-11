@@ -147,7 +147,7 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 [NX FanControl](https://github.com/ppkantorski/NX-FanControl/)<br>
 [NX Shell](https://github.com/joel16/NX-Shell)<br>
 [SwitchThemeInjector](https://github.com/exelix11/SwitchThemeInjector)<br>
-[sys-clk](https://github.com/retronx-team/sys-clk)<br>
+[sys-clk](https://github.com/ppkantorski/sys-clk))<br>
 [SysDVR](https://github.com/exelix11/SysDVR)<br>
 [Thmerzer](https://themezer.net/)<br>
 [tinfoil](https://tinfoil.io/)<br>
@@ -164,6 +164,6 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 [FPSLocker](https://github.com/masagrator/FPSLocker)<br>
 [Status-Monitor-Overlay](https://github.com/masagrator/Status-Monitor-Overlay)<br>
 [haku33](https://github.com/StarDustCFW/Haku33/releases)<br>
-[ReverseNX-RT](https://github.com/masagrator/ReverseNX-RT)
+[ReverseNX-RT](https://github.com/masagrator/ReverseNX-RT)<br>
 以及所有让我们NX变的更好玩的人<br><br>
 
