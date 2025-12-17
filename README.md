@@ -49,7 +49,7 @@
 > 
 > 任天堂HOS20.0.0以后加强了网络连接校验，在虚拟/真实系统中，由于屏蔽了DNS和序列号，连接WIFI会使CPU3满载，造成系统卡顿、耗电，建议非需要时关闭WIFI(呼出Ultrahand-系统功能-WIFI状态 切换为未启用 或 开启飞行模式)<br>
 > 
-> 如果你是 腾讯-任天堂Switch 中国大陆硬件 用户，在升级19.0.1+系统前，可能需要 [切换至全球版本](https://github.com/CaiMiao/Tencent-switcher-GUI)
+> 如果你是 腾讯-任天堂Switch 中国大陆硬件 用户，在升级19.0.1+系统前，可能需要 [切换至全球版本](https://github.com/Cirrest/Tencent-switcher-GUI_Rebulid/releases/)
 
 > [!TIP]
 > 该整合包已添加CommonProblemResolver救砖插件 <br> 可Hekate下删除主题和关闭插件自动启动<br>
