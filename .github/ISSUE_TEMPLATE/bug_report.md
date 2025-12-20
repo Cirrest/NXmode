@@ -1,7 +1,10 @@
 ---
 name: Bug Report
 about: Something doesn't work correctly in Atmosphère.
-#assignees:
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ## Bug Report
