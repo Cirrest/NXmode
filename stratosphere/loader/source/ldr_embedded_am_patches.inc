@@ -13,24 +13,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#pragma once
-#include <vapours.hpp>
 
-namespace ams::erpt::srv {
+/* Patch teardown function call to NOP. */
+constexpr inline const EmbeddedPatchEntry AmDisableTeardownPatches_22_0_0[] = {
+    { 0x5CC4C, "\x1F\x20\x03\xD5", 4 },
+};
 
-    Result Initialize(u8 *mem, size_t mem_size);
-    Result InitializeAndStartService();
-
-    const SystemInfo &GetSystemInfo();
-
-    Result SetSerialNumber(const char *sn, u32 sn_len);
-    Result SetProductModel(const char *model, u32 model_len);
-    Result SetRegionSetting(const char *region, u32 region_len);
-
-    /* Atmosphere extension. */
-    Result SetRedirectNewReportsToSdCard(bool redirect);
-    Result SetEnabledAutomaticReportCleanup(bool redirect);
-
-    void Wait();
-
-}
+constexpr inline const EmbeddedPatch AmDisableTeardownPatches[] = {
+    { ParseModuleId("B337F7C5AD53E55F3D920FCD394B4DE7C3B7D606"), util::size(AmDisableTeardownPatches_22_0_0), AmDisableTeardownPatches_22_0_0 }, /* 22.0.0 */
+};
