@@ -90,7 +90,7 @@
 【进阶超频操作】<br>
 打开UltraHnand<br>
 选择 系统超频 - 设置  进行进阶操作<br>
-[👇旧版本进阶操作方法]
+[👇旧版本进阶操作方法]<br>
 * 打开UltraHnand<br>
 * 按→键选择 `OC Switchcraft EOS` 进行进阶操作<br><br><br>
 
