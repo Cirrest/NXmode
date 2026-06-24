@@ -36,6 +36,11 @@ namespace ams::mitm::fs {
             };
 
             constexpr const ApplicationWithDynamicHeapInfo ApplicationsWithDynamicHeap[] = {
+                /* Until Then. */
+                /* Requirement ~34 MB. */
+                /* No particular heap sensitivity. */
+                { 0x010019C023004000,  16_MB, 0_MB },
+
                 /* Trails in the Sky 1st Chapter. */
                 /* Requirement ? MB. 16 MB stolen heap fixes a crash, though. */
                 /* Unknown heap sensitivity. */
