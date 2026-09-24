@@ -86,14 +86,14 @@ namespace ams::pm::impl {
             R_ABORT_UNLESS(os::CreateSystemEvent(std::addressof(g_hook_to_create_application_process_event), os::EventClearMode_AutoClear, true));
         }
 
-        inline u32 GetLoaderCreateProcessFlags(u32 launch_flags) {
+        inline u32 GetLoaderCreateProcessParameterFlags(u32 launch_flags) {
             u32 ldr_flags = 0;
 
             if (ShouldSignalOnException(launch_flags) || (hos::GetVersion() >= hos::Version_2_0_0 && !ShouldStartSuspended(launch_flags))) {
-                ldr_flags |= ldr::CreateProcessFlag_EnableDebug;
+                ldr_flags |= ldr::CreateProcessParameterFlag_EnableJitDebug;
             }
             if (ShouldDisableAslr(launch_flags)) {
-                ldr_flags |= ldr::CreateProcessFlag_DisableAslr;
+                ldr_flags |= ldr::CreateProcessParameterFlag_DisableAslr;
             }
 
             return ldr_flags;
@@ -142,7 +142,7 @@ namespace ams::pm::impl {
                 R_TRY(ldr::pm::AtmospherePinProgram(std::addressof(pin_id), fixed_location, override_status));
 
                 /* If we fail after now, unpin. */
-                ON_RESULT_FAILURE { ldr::pm::UnpinProgram(pin_id); };
+                ON_RESULT_FAILURE { R_DISCARD(ldr::pm::UnpinProgram(pin_id)); };
 
                 /* Ensure we can talk to mitm services. */
                 {
@@ -166,7 +166,7 @@ namespace ams::pm::impl {
                 WaitResourceAvailable(std::addressof(program_info));
 
                 /* Actually create the process. */
-                R_TRY(ldr::pm::CreateProcess(std::addressof(process_handle), pin_id, GetLoaderCreateProcessFlags(flags), GetResourceLimitHandle(std::addressof(program_info)), attrs.program_attrs));
+                R_TRY(ldr::pm::CreateProcess(std::addressof(process_handle), pin_id, GetLoaderCreateProcessParameterFlags(flags), GetResourceLimitHandle(std::addressof(program_info)), attrs.program_attrs));
             }
 
             /* Get the process id. */
@@ -480,13 +480,16 @@ namespace ams::pm::impl {
     Result NotifyBootFinished() {
         AMS_FUNCTION_LOCAL_STATIC_CONSTINIT(bool, s_has_boot_finished, false);
         if (!s_has_boot_finished) {
-            /* Set program verification disabled, if we should. */
-            /* NOTE: Nintendo does not check the result of this. */
-            if (spl::IsDisabledProgramVerification()) {
-                if (hos::GetVersion() >= hos::Version_10_0_0) {
-                    ldr::pm::SetEnabledProgramVerification(false);
-                } else {
-                    fsprSetEnabledProgramVerification(false);
+            /* 23.0.0+ removed this and all usage of spl from the pm sysmodule, both in normal and safe mode FIRM. */
+            if (hos::GetVersion() < hos::Version_23_0_0) {
+                /* Set program verification disabled, if we should. */
+                /* NOTE: Nintendo does not check the result of this. */
+                if (spl::IsDisabledProgramVerification()) {
+                    if (hos::GetVersion() >= hos::Version_10_0_0) {
+                        R_DISCARD(ldr::pm::SetEnabledProgramVerification(false));
+                    } else {
+                        fsprSetEnabledProgramVerification(false);
+                    }
                 }
             }
 

@@ -466,12 +466,21 @@ namespace ams::boot {
                 boot::ShutdownSystem();
             }
         }
+        
+        /* On 18.0.0+ i2c shutdown is unconditionally disabled here. */
+        if (hos::GetVersion() >= hos::Version_18_0_0) {
+            if (R_FAILED(battery_driver.SetI2cShutdownEnabled(false))) {
+                boot::ShutdownSystem();
+            }
+        }
 
         /* Get the boot reason. */
         const auto boot_reason = boot::GetBootReason();
 
         /* Initialize the charger driver. */
-        if (R_FAILED(charger_driver.Initialize(boot_reason != spl::BootReason_RtcAlarm2)))
+        if (R_FAILED(charger_driver.Initialize(boot_reason != spl::BootReason_RtcAlarm2))) {
+            boot::ShutdownSystem();
+        }
 
         /* Check that the charger input limit is greater than 150 milli-amps. */
         {
@@ -481,7 +490,7 @@ namespace ams::boot {
             }
 
             if (input_current_limit_ma <= 150) {
-                charger_driver.SetChargerConfiguration(powctl::ChargerConfiguration_ChargeDisable);
+                R_DISCARD(charger_driver.SetChargerConfiguration(powctl::ChargerConfiguration_ChargeDisable));
                 boot::ShutdownSystem();
             }
         }
