@@ -1,4 +1,58 @@
 # Changelog
+## 1.12.1
++ Support was added for the new c-ares resolver in `dns.mitm`.
+  + Firmware 23.0.0 introduced a new set of commands to the `sfdnsres` service. These commands provide c-ares async support for DNS resolution and are now used by most sysmodules.
+  + This resulted in host redirection not being applied at all and without warning since we simply were not intercepting the new commands.
+  + `dns.mitm` now fully reimplements the c-ares serialization code and intercepts the relevant commands. In tandem with the `bsdsocket` sysmodule, we now keep track of resolution queries and redirect their results. 
++ Support was added for the new "BatchRead" storage in `fs.mitm`.
+  + Firmware 23.0.0 introduced a new type of filesystem storage object abstracted by the interface "IStorageForBatchRead". This is a derived class from "IStorage" with the purpose of adding the new "BatchRead" command.
+  + Anything that uses the filesystem API now attempts to use this type of storage instead of the old one. This is of particular relevance for `qlaunch` and for supporting custom themes which were broken as a consequence of this change.
+  + `fs.mitm` was updated and extended to not only support the new storage type but also intercept a few newer commands that were previously missing.
++ The patches for the browser applets were redesigned.
+  + The introduction of these patches in the previous release led to several issues and crashes, notably during media playback in the eshop and within games that use LibAppletOff.
+  + After extensive analysis and testing it was concluded that the browser applets were running out of memory and still required reducing the memory we reserve for custom sysmodules.
+  + New patches have been devised and introduced in this release.
+    + Instead of patching size checks, we now trick the browser applets into thinking there is 1GB of free memory available to them.
+    + Unused memory is still being reclaimed and discounted from the root heap, but now more realistically.
+    + The browser engine's heap is now being shrunk with no noticeable downsides to media playback nor web page rendering.
+  + Thanks to these changes we can now provide 40MB for custom system modules once again.
++ A number of minor issues were fixed and improvements were made, such as:
+  + Automatic PRODINFO backup was fixed for recent console models that no longer use the ECC device certificate (thanks @chrisbraucker).
+  + State initialization for SharedMemory and TransferMemory was fixed (thanks @fl0be).
+  + Compatibility was fixed for Trails in the Sky 2nd Chapter (thanks @masagrator). 
++ General system stability improvements to enhance the user's experience.
+## 1.12.0
++ Support was added for 23.0.0.
++ Special thanks to @alula for handling the implementation of several kernel changes.
+  + The console should boot and atmosphère should be fully functional.
+  + **Please note**: As a result of changes made to nintendo's software in 23.0.0, there is even less memory available for custom system modules.
+    + The amount of memory we can steal from the applet pool has been reduced beyond 7MB and we can no longer launch browser applets (e.g.: eshop) without crashing.
+    + To compensate for this, a set of patches for the browser applets has been introduced.
+      + Thanks to the redesign of the browser applets in 22.0.0 there are only 3 applets we need to worry about: systemWeb, openWeb and LibAppletOff.
+      + With the added burden of maintaining patches for these applets, we can reclaim around 9MB of reserved memory by patching out their allocations.
+      + This memory is provably unused and stealing it should not affect the browser applets in any way as the applets themselves tag it as reserved and never access it.
+      + As a result, the memory available for custom system modules has been experimentally increased to 16MB.
+      + Preliminary testing has seemingly shown no downsides to the overall functioning of the OS and the browser applets in particular.
+      + Nonetheless, please report any issues you may face to ensure no edge cases have been missed and to determine if the memory amount needs to be adjusted. 
+      + These patches may be deprecated at any point in the future if a better solution is devised.     
+  + `exosphère` was updated to reflect the latest official secure monitor behavior.
+    + A new ConfigItem was added to the secure monitor for the first time since firmware 5.0.0.
+  + `mesosphère` was updated to reflect the latest official kernel behavior.
+    + The kernel now supports a 42bit wide address space.
+    + A new memory region dubbed ShadowStack has been introduced.
+    + Kernel RNG was changed to CTR-DRBG.
+  + `boot` was updated to reflect the latest official behavior and to implement a previously missing change.
+    + The way battery i2c shutdown was being enabled changed in firmware 18.0.0 and we missed it.
+    + It is possible this might have been related to a known battery draining issue reported to have started around firmware 18.0.0. Further testing will be needed to confirm.
+  + `loader` was updated to reflect the latest official behavior.
+  + `erpt` was updated to reflect the latest official behavior.
+  + `pgl` was updated to reflect the latest official behavior.
+  + `ro` was updated to reflect the latest official behavior.
+    + NROs can now be lz4 frame compressed.
++ ZBIC compresison/decompression has been properly implemented. Applications using it should now launch and work properly.
++ A dockerfile has been added to atmosphère (thanks @alula).
++ R_DISCARD macro has been adopted across the entire codebase where applicable. This finishes the work started in version 1.10.0 and eliminates the nodiscard warnings during compilation.
++ General system stability improvements to enhance the user's experience.
 ## 1.11.2
 + Basic support was added for 22.5.0.
 + Atmosphère was updated to use GCC 16/newlib (latest devkitA64/devkitARM releases).

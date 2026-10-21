@@ -357,7 +357,13 @@ namespace ams::kern::board::nintendo::nx {
         /* Return (possibly) adjusted size. */
         /* NOTE: On 20.0.0+ (and even more-so 21.0.0+) the browser requires much more memory in the applet pool in order to function. */
         /* Thus, we have to reduce our extra system memory size by 26 MB to compensate. */
-        if (kern::GetTargetFirmware() >= ams::TargetFirmware_21_0_0) {
+        /* NOTE: On 23.0.0+ we are patching memory allocation for each browser applet since there are only 3 of them now. */
+        /* Reclaiming unused memory and lying to the browser about memory limits allows us to go back to 40 MB of extra system memory. */
+        /* TODO: Deduplicate post 23.0.0 and pre 20.0.0. For now, this structure helps with readability and is still subject to change. */  
+        if (kern::GetTargetFirmware() >= ams::TargetFirmware_23_0_0) {
+            constexpr size_t ExtraSystemMemoryForAtmosphere_23_0_0 = 40_MB;
+            return base_pool_size - ExtraSystemMemoryForAtmosphere_23_0_0 - KTraceBufferSize;
+        } else if (kern::GetTargetFirmware() >= ams::TargetFirmware_21_0_0) {
             constexpr size_t ExtraSystemMemoryForAtmosphere_21_0_0 = 7_MB;
             return base_pool_size - ExtraSystemMemoryForAtmosphere_21_0_0 - KTraceBufferSize;
         } else if (kern::GetTargetFirmware() >= ams::TargetFirmware_20_0_0) {
