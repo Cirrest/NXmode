@@ -171,5 +171,6 @@ hwfly工具箱，hwfly芯片专用，支持不可更新固件的hwfly芯片免�
 [haku33](https://github.com/StarDustCFW/Haku33/releases)<br>
 [ReverseNX-RT](https://github.com/masagrator/ReverseNX-RT)<br>
 [Horizon-OC](https://github.com/Horizon-OC/Horizon-OC)<br>
+[Warmboot-Extractor](https://github.com/sthetix/Warmboot-Extractor)<br>
 以及所有让我们NX变的更好玩的人<br><br>
 
